@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style2.css" type="text/css"/>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <script src="anim.js"></script>
+            <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+          <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+          <style>
+          @import url("https://stages-emplois.centrale-marseille.fr/modules/system/system.base.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/modules/system/system.menus.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/modules/system/system.messages.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/modules/system/system.theme.css?oyyfn5");
+          </style>
+          <style>
+          @import url("https://stages-emplois.centrale-marseille.fr/misc/ui/jquery.ui.core.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/misc/ui/jquery.ui.theme.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/misc/ui/jquery.ui.autocomplete.css?oyyfn5");
+          </style>
+          <style>
+          @import url("https://stages-emplois.centrale-marseille.fr/modules/comment/comment.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/modules/date/date_api/date.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/modules/field/theme/field.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/modules/node/node.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/modules/search/search.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/modules/user/user.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/modules/views/css/views.css?oyyfn5");
+          </style>
+          <style>
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/modules/apachesolr_autocomplete/apachesolr_autocomplete.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/modules/ctools/css/ctools.css?oyyfn5");
+          </style>
+          <style media="screen">
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/adaptivetheme/at_core/css/at.settings.style.headings.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/adaptivetheme/at_core/css/at.settings.style.image.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/adaptivetheme/at_core/css/at.layout.css?oyyfn5");
+          </style>
+          <style>
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/html-elements.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/forms.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/tables.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/page.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/articles.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/comments.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/fields.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/blocks.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/navigation.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/corolla.settings.style.css?oyyfn5");
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/stages-emplois.centrale-marseille.fr/files/color/corolla-656d82c6/colors.css?oyyfn5");
+          </style>
+          <style media="print">
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/print.css?oyyfn5");
+          </style>
+          <link type="text/css" rel="stylesheet" href="https://stages-emplois.centrale-marseille.fr/sites/stages-emplois.centrale-marseille.fr/files/adaptivetheme/corolla_files/corolla.responsive.layout.css?oyyfn5" media="only screen" />
+          <style media="screen">
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/stages-emplois.centrale-marseille.fr/files/adaptivetheme/corolla_files/corolla.fonts.css?oyyfn5");
+          </style>
+          <link type="text/css" rel="stylesheet" href="https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/responsive.smartphone.portrait.css?oyyfn5" media="only screen and (max-width:320px)" />
+          <link type="text/css" rel="stylesheet" href="https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/responsive.smartphone.landscape.css?oyyfn5" media="only screen and (min-width:321px) and (max-width:480px)" />
+          <link type="text/css" rel="stylesheet" href="https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/responsive.tablet.portrait.css?oyyfn5" media="only screen and (min-width:481px) and (max-width:768px)" />
+          <link type="text/css" rel="stylesheet" href="https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/responsive.tablet.landscape.css?oyyfn5" media="only screen and (min-width:769px) and (max-width:1024px)" />
+          <link type="text/css" rel="stylesheet" href="https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/responsive.desktop.css?oyyfn5" media="only screen and (min-width:1025px)" />
+          <style media="screen">
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/stages-emplois.centrale-marseille.fr/files/adaptivetheme/corolla_files/corolla.custom.css?oyyfn5");
+          </style>
+
+          <!--[if lt IE 9]>
+          <style media="screen">
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/stages-emplois.centrale-marseille.fr/files/adaptivetheme/corolla_files/corolla.lt-ie9.layout.css?oyyfn5");
+          </style>
+          <![endif]-->
+
+          <!--[if lte IE 9]>
+          <style media="screen">
+          @import url("https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/ie-lte-9.css?oyyfn5");
+          </style>
+          <![endif]-->
+          <script src="https://stages-emplois.centrale-marseille.fr/misc/jquery.js?v=1.4.4"></script>
+          <script src="https://stages-emplois.centrale-marseille.fr/misc/jquery.once.js?v=1.2"></script>
+          <script src="https://stages-emplois.centrale-marseille.fr/misc/drupal.js?oyyfn5"></script>
+          <script src="https://stages-emplois.centrale-marseille.fr/misc/ui/jquery.ui.core.min.js?v=1.8.7"></script>
+          <script src="https://stages-emplois.centrale-marseille.fr/misc/ui/jquery.ui.widget.min.js?v=1.8.7"></script>
+          <script src="https://stages-emplois.centrale-marseille.fr/misc/ui/jquery.ui.position.min.js?v=1.8.7"></script>
+          <script src="https://stages-emplois.centrale-marseille.fr/misc/ui/jquery.ui.autocomplete.min.js?v=1.8.7"></script>
+          <script src="https://stages-emplois.centrale-marseille.fr/sites/stages-emplois.centrale-marseille.fr/files/languages/fr_Dzgf46vLu_qXToZIwWJBRKhlkkmIPAcu1Y21kjMbGxE.js?oyyfn5"></script>
+          <script src="https://stages-emplois.centrale-marseille.fr/sites/all/modules/apachesolr_autocomplete/apachesolr_autocomplete_jqueryui.js?oyyfn5"></script>
+          <script src="https://stages-emplois.centrale-marseille.fr/misc/tableheader.js?oyyfn5"></script>
+          <script src="https://stages-emplois.centrale-marseille.fr/sites/all/modules/piwik/piwik.js?oyyfn5"></script>
+          <script>jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"corolla","theme_token":"5k5p1KgdYmQQTIW1_NQ10_ZbtYuqQo2olAPhSRxwVYM","js":{"0":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/ui\/jquery.ui.widget.min.js":1,"misc\/ui\/jquery.ui.position.min.js":1,"misc\/ui\/jquery.ui.autocomplete.min.js":1,"public:\/\/languages\/fr_Dzgf46vLu_qXToZIwWJBRKhlkkmIPAcu1Y21kjMbGxE.js":1,"sites\/all\/modules\/apachesolr_autocomplete\/apachesolr_autocomplete_jqueryui.js":1,"misc\/tableheader.js":1,"sites\/all\/modules\/piwik\/piwik.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.autocomplete.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/apachesolr_autocomplete\/apachesolr_autocomplete.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/themes\/adaptivetheme\/at_core\/css\/at.settings.style.headings.css":1,"sites\/all\/themes\/adaptivetheme\/at_core\/css\/at.settings.style.image.css":1,"sites\/all\/themes\/adaptivetheme\/at_core\/css\/at.layout.css":1,"sites\/all\/themes\/corolla\/css\/html-elements.css":1,"sites\/all\/themes\/corolla\/css\/forms.css":1,"sites\/all\/themes\/corolla\/css\/tables.css":1,"sites\/all\/themes\/corolla\/css\/page.css":1,"sites\/all\/themes\/corolla\/css\/articles.css":1,"sites\/all\/themes\/corolla\/css\/comments.css":1,"sites\/all\/themes\/corolla\/css\/fields.css":1,"sites\/all\/themes\/corolla\/css\/blocks.css":1,"sites\/all\/themes\/corolla\/css\/navigation.css":1,"sites\/all\/themes\/corolla\/css\/fonts.css":1,"sites\/all\/themes\/corolla\/css\/corolla.settings.style.css":1,"sites\/all\/themes\/corolla\/color\/colors.css":1,"sites\/all\/themes\/corolla\/css\/print.css":1,"public:\/\/adaptivetheme\/corolla_files\/corolla.responsive.layout.css":1,"public:\/\/adaptivetheme\/corolla_files\/corolla.fonts.css":1,"sites\/all\/themes\/corolla\/css\/responsive.smartphone.portrait.css":1,"sites\/all\/themes\/corolla\/css\/responsive.smartphone.landscape.css":1,"sites\/all\/themes\/corolla\/css\/responsive.tablet.portrait.css":1,"sites\/all\/themes\/corolla\/css\/responsive.tablet.landscape.css":1,"sites\/all\/themes\/corolla\/css\/responsive.desktop.css":1,"public:\/\/adaptivetheme\/corolla_files\/corolla.custom.css":1,"public:\/\/adaptivetheme\/corolla_files\/corolla.lt-ie9.layout.css":1,"sites\/all\/themes\/corolla\/css\/ie-lte-9.css":1}},"urlIsAjaxTrusted":{"\/voir-offres":true,"\/search\/site":true},"apachesolr_autocomplete":{"forms":{"search-block-form":{"id":"search-block-form","path":"\/apachesolr_autocomplete_callback\/apachesolr_search_page%3Acore_search"}}},"piwik":{"trackMailto":1},"adaptivetheme":{"corolla":{"layout_settings":{"bigscreen":"three-col-grail","tablet_landscape":"three-col-grail","tablet_portrait":"one-col-vert"},"media_query_settings":{"bigscreen":"only screen and (min-width:1025px)","tablet_landscape":"only screen and (min-width:769px) and (max-width:1024px)","tablet_portrait":"only screen and (min-width:481px) and (max-width:768px)"}}}});</script>
+          <!--[if lt IE 9]>
+          <script src="https://stages-emplois.centrale-marseille.fr/sites/all/themes/adaptivetheme/at_core/scripts/html5.js?oyyfn5"></script>
+          <![endif]-->
+    </head>
+
+    <body onload="openNav()"><div id="main">
+        <div class="container">
+                <div class="row">
+                <div class="col-md-2 titre" id="gauche"></div>
+                <div class="col-md-6 titre" id="droite"><h1> Offres de stages </h1></div>
+                <div class="col-md-4 titre"><img src="Logo_Centrale_Marseille.svg.png" width=90%></div>
+                </div>
+        </div>
+        <div class="view-filters" id="offres">
+ <form action="/voir-offres" method="get" id="views-exposed-form-voir-offre-page" accept-charset="UTF-8"><div><div class="views-exposed-form">
+<div class="views-exposed-widgets clearfix">
+     <div id="edit-field-cible-value-wrapper" class="views-exposed-widget views-widget-filter-field_cible_value">
+             <label for="edit-field-cible-value">
+       Offre destinée à          </label>
+                   <div class="views-widget">
+     <div class="form-item form-type-select form-item-field-cible-value">
+<select multiple="multiple" name="field_cible_value[]" id="edit-field-cible-value" size="6" class="form-select"><option value="C1" selected="selected">1A</option><option value="C2" selected="selected">2A</option><option value="C3" selected="selected">3A</option><option value="C4" selected="selected">césure</option><option value="C5" selected="selected">emploi</option><option value="C6">thèse</option></select>
+</div>
+   </div>
+         </div>
+     <div id="edit-field-sp-cialit-value-wrapper" class="views-exposed-widget views-widget-filter-field_sp_cialit__value">
+             <label for="edit-field-sp-cialit-value">
+       Domaine de compétence du stagiaire recherché          </label>
+                   <div class="views-widget">
+     <div class="form-item form-type-select form-item-field-sp-cialit--value">
+<select id="edit-field-sp-cialit-value" name="field_sp_cialit__value" class="form-select"><option value="All" selected="selected">- Tout -</option><option value="Méca">Mécanique (acoustique, modélisation, structures, fluides, génie marin)</option><option value="Physique">Physique (micro-systèmes, optique-photonique, systèmes automatisés)</option><option value="Chimie">Chimie et génie des procédés</option><option value="Ingénierie">Ingénierie et gestion de projet</option><option value="GestionFi">Gestion et finance</option><option value="MathInfo">Mathématiques et informatique</option><option value="Autre">Autre</option></select>
+</div>
+   </div>
+         </div>
+     <div id="edit-field-type-d-offre-value-wrapper" class="views-exposed-widget views-widget-filter-field_type_d_offre_value">
+             <label for="edit-field-type-d-offre-value">
+       Stage de laboratoire ou VIE          </label>
+                   <div class="views-widget">
+     <div class="form-item form-type-select form-item-field-type-d-offre-value">
+<select id="edit-field-type-d-offre-value" name="field_type_d_offre_value" class="form-select"><option value="All" selected="selected">- Tout -</option><option value="Rech"> stage recherche (stage en laboratoire)</option><option value="VIE">VIE ( Volontariat à l’International en Entreprise)</option></select>
+</div>
+   </div>
+         </div>
+     <div id="edit-field-stage-france-value-wrapper" class="views-exposed-widget views-widget-filter-field_stage_france_value">
+             <label for="edit-field-stage-france-value">
+       France/Etranger          </label>
+                   <div class="views-widget">
+     <div class="form-item form-type-select form-item-field-stage-france-value">
+<select id="edit-field-stage-france-value" name="field_stage_france_value" class="form-select"><option value="All" selected="selected">- Tout -</option><option value="0">International</option><option value="1">France</option></select>
+</div>
+   </div>
+         </div>
+               <div class="views-exposed-widget views-submit-button">
+ <input type="submit" id="edit-submit-voir-offre" name="" value="Appliquer" class="form-submit" />    </div>
+ </div>
+</div>
+</div></form>    </div>
+
+
+ <div class="view-content">
+ <table class="views-table sticky-enabled cols-11" >
+    <thead>
+ <tr>
+             <th class="views-field views-field-title"  scope="col">
+       Intitulé          </th>
+             <th class="views-field views-field-created active"  scope="col">
+       <a href="/voir-offres?field_cible_value%5BC1%5D=C1&amp;field_cible_value%5BC2%5D=C2&amp;field_cible_value%5BC3%5D=C3&amp;field_cible_value%5BC4%5D=C4&amp;field_cible_value%5BC5%5D=C5&amp;field_sp_cialit__value=All&amp;field_type_d_offre_value=All&amp;field_stage_france_value=All&amp;order=created&amp;sort=asc" title="trier par Date de publication" class="active">Date de publication<img typeof="foaf:Image" class="image-style-none" src="https://stages-emplois.centrale-marseille.fr/sites/all/themes/corolla/css/images/tablesort-ascending.png" alt="trier par ordre croissant" title="trier par ordre croissant" /></a>          </th>
+             <th class="views-field views-field-field-nom-etablissement"  scope="col">
+       <a href="/voir-offres?field_cible_value%5BC1%5D=C1&amp;field_cible_value%5BC2%5D=C2&amp;field_cible_value%5BC3%5D=C3&amp;field_cible_value%5BC4%5D=C4&amp;field_cible_value%5BC5%5D=C5&amp;field_sp_cialit__value=All&amp;field_type_d_offre_value=All&amp;field_stage_france_value=All&amp;order=field_nom_etablissement&amp;sort=asc" title="trier par Nom de l&amp;amp;#039;établissement" class="active">Nom de l&#039;établissement</a>          </th>
+             <th class="views-field views-field-field-cible"  scope="col">
+       Offre pour : 1A, 2A, 3A, césure, emploi, thèse          </th>
+             <th class="views-field views-field-field-type-d-offre"  scope="col">
+       <a href="/voir-offres?field_cible_value%5BC1%5D=C1&amp;field_cible_value%5BC2%5D=C2&amp;field_cible_value%5BC3%5D=C3&amp;field_cible_value%5BC4%5D=C4&amp;field_cible_value%5BC5%5D=C5&amp;field_sp_cialit__value=All&amp;field_type_d_offre_value=All&amp;field_stage_france_value=All&amp;order=field_type_d_offre&amp;sort=asc" title="trier par Type d&amp;amp;#039;offre" class="active">Type d&#039;offre</a>          </th>
+             <th class="views-field views-field-field-sp-cialit-"  scope="col">
+       <a href="/voir-offres?field_cible_value%5BC1%5D=C1&amp;field_cible_value%5BC2%5D=C2&amp;field_cible_value%5BC3%5D=C3&amp;field_cible_value%5BC4%5D=C4&amp;field_cible_value%5BC5%5D=C5&amp;field_sp_cialit__value=All&amp;field_type_d_offre_value=All&amp;field_stage_france_value=All&amp;order=field_sp_cialit_&amp;sort=asc" title="trier par Domaine de compétences du stagiaire recherché" class="active">Domaine de compétences du stagiaire recherché</a>          </th>
+             <th class="views-field views-field-field-specialite"  scope="col">
+       <a href="/voir-offres?field_cible_value%5BC1%5D=C1&amp;field_cible_value%5BC2%5D=C2&amp;field_cible_value%5BC3%5D=C3&amp;field_cible_value%5BC4%5D=C4&amp;field_cible_value%5BC5%5D=C5&amp;field_sp_cialit__value=All&amp;field_type_d_offre_value=All&amp;field_stage_france_value=All&amp;order=field_specialite&amp;sort=asc" title="trier par Spécialité" class="active">Spécialité</a>          </th>
+             <th class="views-field views-field-field-stage-france"  scope="col">
+       <a href="/voir-offres?field_cible_value%5BC1%5D=C1&amp;field_cible_value%5BC2%5D=C2&amp;field_cible_value%5BC3%5D=C3&amp;field_cible_value%5BC4%5D=C4&amp;field_cible_value%5BC5%5D=C5&amp;field_sp_cialit__value=All&amp;field_type_d_offre_value=All&amp;field_stage_france_value=All&amp;order=field_stage_france&amp;sort=asc" title="trier par France/Etranger" class="active">France/Etranger</a>          </th>
+             <th class="views-field views-field-field-lieu-du-stage-r-gion-"  scope="col">
+       <a href="/voir-offres?field_cible_value%5BC1%5D=C1&amp;field_cible_value%5BC2%5D=C2&amp;field_cible_value%5BC3%5D=C3&amp;field_cible_value%5BC4%5D=C4&amp;field_cible_value%5BC5%5D=C5&amp;field_sp_cialit__value=All&amp;field_type_d_offre_value=All&amp;field_stage_france_value=All&amp;order=field_lieu_du_stage_r_gion_&amp;sort=asc" title="trier par Lieu du stage (région)" class="active">Lieu du stage (région)</a>          </th>
+             <th class="views-field views-field-field-date-debut"  scope="col">
+       <a href="/voir-offres?field_cible_value%5BC1%5D=C1&amp;field_cible_value%5BC2%5D=C2&amp;field_cible_value%5BC3%5D=C3&amp;field_cible_value%5BC4%5D=C4&amp;field_cible_value%5BC5%5D=C5&amp;field_sp_cialit__value=All&amp;field_type_d_offre_value=All&amp;field_stage_france_value=All&amp;order=field_date_debut&amp;sort=asc" title="trier par Date de début" class="active">Date de début</a>          </th>
+             <th class="views-field views-field-field-partenariat"  scope="col">
+       <a href="/voir-offres?field_cible_value%5BC1%5D=C1&amp;field_cible_value%5BC2%5D=C2&amp;field_cible_value%5BC3%5D=C3&amp;field_cible_value%5BC4%5D=C4&amp;field_cible_value%5BC5%5D=C5&amp;field_sp_cialit__value=All&amp;field_type_d_offre_value=All&amp;field_stage_france_value=All&amp;order=field_partenariat&amp;sort=asc" title="trier par partenariat" class="active">partenariat</a>          </th>
+         </tr>
+</thead>
+<tbody>
+     <tr class="odd views-row-first">
+             <td class="views-field views-field-title" >
+       <a href="/offre/8580">Etude et mise en oeuvre d&#039;un nouveau procédé de bio-impression par laser</a>          </td>
+             <td class="views-field views-field-created active" >
+       08/01/2018 - 09:50          </td>
+             <td class="views-field views-field-field-nom-etablissement" >
+       Poietis          </td>
+             <td class="views-field views-field-field-cible" >
+       3A, césure          </td>
+             <td class="views-field views-field-field-type-d-offre" >
+                 </td>
+             <td class="views-field views-field-field-sp-cialit-" >
+       Ingénierie et gestion de projet          </td>
+             <td class="views-field views-field-field-specialite" >
+       Recherche et développement          </td>
+             <td class="views-field views-field-field-stage-france" >
+       France          </td>
+             <td class="views-field views-field-field-lieu-du-stage-r-gion-" >
+       AQUITAINE          </td>
+             <td class="views-field views-field-field-date-debut" >
+       <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-03-01T00:00:00+01:00">01/03/2018</span>          </td>
+             <td class="views-field views-field-field-partenariat" >
+       non partenaire          </td>
+         </tr>
+     <tr class="even">
+             <td class="views-field views-field-title" >
+       <a href="/offre/8579">Mesures d’absorption non-linéaire dans le cadre de la bio-impression par laser</a>          </td>
+             <td class="views-field views-field-created active" >
+       08/01/2018 - 09:46          </td>
+             <td class="views-field views-field-field-nom-etablissement" >
+       CELIA (CNRS)          </td>
+             <td class="views-field views-field-field-cible" >
+       3A, césure          </td>
+             <td class="views-field views-field-field-type-d-offre" >
+        stage recherche (stage en laboratoire)          </td>
+             <td class="views-field views-field-field-sp-cialit-" >
+       Physique (micro-systèmes, optique-photonique, systèmes automatisés)          </td>
+             <td class="views-field views-field-field-specialite" >
+       Recherche et développement          </td>
+             <td class="views-field views-field-field-stage-france" >
+       France          </td>
+             <td class="views-field views-field-field-lieu-du-stage-r-gion-" >
+       AQUITAINE          </td>
+             <td class="views-field views-field-field-date-debut" >
+       <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-02-01T00:00:00+01:00">01/02/2018</span>          </td>
+             <td class="views-field views-field-field-partenariat" >
+       non partenaire          </td>
+         </tr>
+     <tr class="odd">
+             <td class="views-field views-field-title" >
+       <a href="/offre/8578">Responsable de Production</a>          </td>
+             <td class="views-field views-field-created active" >
+       05/01/2018 - 15:49          </td>
+             <td class="views-field views-field-field-nom-etablissement" >
+       Uraniom          </td>
+             <td class="views-field views-field-field-cible" >
+       3A, emploi          </td>
+             <td class="views-field views-field-field-type-d-offre" >
+                 </td>
+             <td class="views-field views-field-field-sp-cialit-" >
+       Autre          </td>
+             <td class="views-field views-field-field-specialite" >
+       Autre          </td>
+             <td class="views-field views-field-field-stage-france" >
+       France          </td>
+             <td class="views-field views-field-field-lieu-du-stage-r-gion-" >
+       PAYS DE LA LOIRE          </td>
+             <td class="views-field views-field-field-date-debut" >
+       <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-02-19T00:00:00+01:00">19/02/2018</span>          </td>
+             <td class="views-field views-field-field-partenariat" >
+       non partenaire          </td>
+         </tr>
+     <tr class="even">
+             <td class="views-field views-field-title" >
+       <a href="/offre/8577">Consultant Diagnostic Eco Financier Stratégique (nouveau)</a>          </td>
+             <td class="views-field views-field-created active" >
+       05/01/2018 - 13:03          </td>
+             <td class="views-field views-field-field-nom-etablissement" >
+       Apex          </td>
+             <td class="views-field views-field-field-cible" >
+       emploi          </td>
+             <td class="views-field views-field-field-type-d-offre" >
+                 </td>
+             <td class="views-field views-field-field-sp-cialit-" >
+       Gestion et finance          </td>
+             <td class="views-field views-field-field-specialite" >
+       Autre          </td>
+             <td class="views-field views-field-field-stage-france" >
+       France          </td>
+             <td class="views-field views-field-field-lieu-du-stage-r-gion-" >
+       ILE DE FRANCE          </td>
+             <td class="views-field views-field-field-date-debut" >
+       <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-01-05T00:00:00+01:00">05/01/2018</span>          </td>
+             <td class="views-field views-field-field-partenariat" >
+       non partenaire          </td>
+         </tr>
+     <tr class="odd">
+             <td class="views-field views-field-title" >
+       <a href="/offre/8576">Ingénieur Synthèse des Environnements Systèmes d&#039;Armes H/F</a>          </td>
+             <td class="views-field views-field-created active" >
+       05/01/2018 - 09:23          </td>
+             <td class="views-field views-field-field-nom-etablissement" >
+       MBDA          </td>
+             <td class="views-field views-field-field-cible" >
+       emploi          </td>
+             <td class="views-field views-field-field-type-d-offre" >
+                 </td>
+             <td class="views-field views-field-field-sp-cialit-" >
+       Physique (micro-systèmes, optique-photonique, systèmes automatisés)          </td>
+             <td class="views-field views-field-field-specialite" >
+       Autre          </td>
+             <td class="views-field views-field-field-stage-france" >
+       France          </td>
+             <td class="views-field views-field-field-lieu-du-stage-r-gion-" >
+       ILE DE FRANCE          </td>
+             <td class="views-field views-field-field-date-debut" >
+       <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-01-05T00:00:00+01:00">05/01/2018</span>          </td>
+             <td class="views-field views-field-field-partenariat" >
+       non partenaire          </td>
+         </tr>
+     <tr class="even">
+             <td class="views-field views-field-title" >
+       <a href="/offre/8575">Consultant Junior SI - Services Financiers H/F</a>          </td>
+             <td class="views-field views-field-created active" >
+       04/01/2018 - 13:39          </td>
+             <td class="views-field views-field-field-nom-etablissement" >
+       EY          </td>
+             <td class="views-field views-field-field-cible" >
+       emploi          </td>
+             <td class="views-field views-field-field-type-d-offre" >
+                 </td>
+             <td class="views-field views-field-field-sp-cialit-" >
+       Autre          </td>
+             <td class="views-field views-field-field-specialite" >
+       Audit, conseil          </td>
+             <td class="views-field views-field-field-stage-france" >
+       France          </td>
+             <td class="views-field views-field-field-lieu-du-stage-r-gion-" >
+       ILE DE FRANCE          </td>
+             <td class="views-field views-field-field-date-debut" >
+       <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-09-03T00:00:00+02:00">03/09/2018</span>          </td>
+             <td class="views-field views-field-field-partenariat" >
+       non partenaire          </td>
+         </tr>
+     <tr class="odd">
+             <td class="views-field views-field-title" >
+       <a href="/offre/8574">Spécialiste en Aérodynamique H/F</a>          </td>
+             <td class="views-field views-field-created active" >
+       03/01/2018 - 18:10          </td>
+             <td class="views-field views-field-field-nom-etablissement" >
+       MBDA          </td>
+             <td class="views-field views-field-field-cible" >
+       emploi          </td>
+             <td class="views-field views-field-field-type-d-offre" >
+                 </td>
+             <td class="views-field views-field-field-sp-cialit-" >
+       Mécanique (acoustique, modélisation, structures, fluides, génie marin)          </td>
+             <td class="views-field views-field-field-specialite" >
+       Autre          </td>
+             <td class="views-field views-field-field-stage-france" >
+       France          </td>
+             <td class="views-field views-field-field-lieu-du-stage-r-gion-" >
+       ILE DE FRANCE          </td>
+             <td class="views-field views-field-field-date-debut" >
+       <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-01-03T00:00:00+01:00">03/01/2018</span>          </td>
+             <td class="views-field views-field-field-partenariat" >
+       non partenaire          </td>
+         </tr>
+     <tr class="even">
+             <td class="views-field views-field-title" >
+       <a href="/offre/8573">Spécialiste Etudes Sûreté de Fonctionnement H/F</a>          </td>
+             <td class="views-field views-field-created active" >
+       03/01/2018 - 17:34          </td>
+             <td class="views-field views-field-field-nom-etablissement" >
+       MBDA          </td>
+             <td class="views-field views-field-field-cible" >
+       emploi          </td>
+             <td class="views-field views-field-field-type-d-offre" >
+                 </td>
+             <td class="views-field views-field-field-sp-cialit-" >
+       Mécanique (acoustique, modélisation, structures, fluides, génie marin)          </td>
+             <td class="views-field views-field-field-specialite" >
+       Autre          </td>
+             <td class="views-field views-field-field-stage-france" >
+       France          </td>
+             <td class="views-field views-field-field-lieu-du-stage-r-gion-" >
+       ILE DE FRANCE          </td>
+             <td class="views-field views-field-field-date-debut" >
+       <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-01-03T00:00:00+01:00">03/01/2018</span>          </td>
+             <td class="views-field views-field-field-partenariat" >
+       non partenaire          </td>
+         </tr>
+     <tr class="odd">
+             <td class="views-field views-field-title" >
+       <a href="/offre/8572">Contrôleur de Gestion Sociale (H/F)</a>          </td>
+             <td class="views-field views-field-created active" >
+       03/01/2018 - 17:05          </td>
+             <td class="views-field views-field-field-nom-etablissement" >
+       Alten          </td>
+             <td class="views-field views-field-field-cible" >
+       emploi          </td>
+             <td class="views-field views-field-field-type-d-offre" >
+                 </td>
+             <td class="views-field views-field-field-sp-cialit-" >
+       Gestion et finance          </td>
+             <td class="views-field views-field-field-specialite" >
+       Autre          </td>
+             <td class="views-field views-field-field-stage-france" >
+       France          </td>
+             <td class="views-field views-field-field-lieu-du-stage-r-gion-" >
+       ILE DE FRANCE          </td>
+             <td class="views-field views-field-field-date-debut" >
+       <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-01-15T00:00:00+01:00">15/01/2018</span>          </td>
+             <td class="views-field views-field-field-partenariat" >
+       non partenaire          </td>
+         </tr>
+     <tr class="even views-row-last">
+             <td class="views-field views-field-title" >
+       <a href="/offre/8571">Stage : Simulation de la turbulence atmosphérique vue par un senseur H/F </a>          </td>
+             <td class="views-field views-field-created active" >
+       03/01/2018 - 16:45          </td>
+             <td class="views-field views-field-field-nom-etablissement" >
+       MBDA France          </td>
+             <td class="views-field views-field-field-cible" >
+       3A          </td>
+             <td class="views-field views-field-field-type-d-offre" >
+                 </td>
+             <td class="views-field views-field-field-sp-cialit-" >
+       Physique (micro-systèmes, optique-photonique, systèmes automatisés)          </td>
+             <td class="views-field views-field-field-specialite" >
+       Recherche et développement          </td>
+             <td class="views-field views-field-field-stage-france" >
+       France          </td>
+             <td class="views-field views-field-field-lieu-du-stage-r-gion-" >
+       ILE DE FRANCE          </td>
+             <td class="views-field views-field-field-date-debut" >
+       <span class="date-display-single" property="dc:date" datatype="xsd:dateTime" content="2018-02-09T00:00:00+01:00">09/02/2018</span>          </td>
+             <td class="views-field views-field-field-partenariat" >
+       non partenaire          </td>
+         </tr>
+ </tbody>
+</table>
+</div>
+
+ <h2 class="element-invisible">Pages</h2><div class="item-list item-list-pager"><ul class="pager"><li class="pager-current even first">1</li><li class="pager-item odd"><a title="Aller à la page 2" href="/voir-offres?page=1">2</a></li><li class="pager-item even"><a title="Aller à la page 3" href="/voir-offres?page=2">3</a></li><li class="pager-item odd"><a title="Aller à la page 4" href="/voir-offres?page=3">4</a></li><li class="pager-item even"><a title="Aller à la page 5" href="/voir-offres?page=4">5</a></li><li class="pager-item odd"><a title="Aller à la page 6" href="/voir-offres?page=5">6</a></li><li class="pager-item even"><a title="Aller à la page 7" href="/voir-offres?page=6">7</a></li><li class="pager-item odd"><a title="Aller à la page 8" href="/voir-offres?page=7">8</a></li><li class="pager-item even"><a title="Aller à la page 9" href="/voir-offres?page=8">9</a></li><li class="pager-ellipsis odd">…</li><li class="pager-next even"><a title="Aller à la page suivante" href="/voir-offres?page=1">suivant ›</a></li><li class="pager-last odd last"><a title="Aller à la dernière page" href="/voir-offres?page=65">dernier »</a></li></ul></div>
+
+
+
+
+</div>                      </div>
+
+
+               </div>
+             </div>
+
+           </section>
+
+
+         </div>
+       </div>
+            </div>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i><div class="menu-text"> Accueil</div></a>
+        <a href="infos.html"><i class="fa fa-info" aria-hidden="true"></i><div class="menu-text"> Informations</div></a>
+        <a href="offres.html"><i class="fa fa-briefcase" aria-hidden="true"></i><div class="menu-text"> Offres de stages</div></a>
+        <a href="debuter.html"> <i class="fa fa-handshake-o" aria-hidden="true"></i><div class="menu-text"> Débuter son stage</div></a>
+        <a href="evaluation.html"><i class="fa fa-check-square" aria-hidden="true"></i><div class="menu-text"> Evaluation</div></a>
+        <a href="FAQ.html"> <i class="fa fa-question" aria-hidden="true"></i><div class="menu-text"> FAQ</div></a>
+        <form class="example" action="action_page.php">
+          <input type="text" placeholder="Que recherchez-vous ?" name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+
+      </div>
+    <div class="menu">
+    <span onclick="openNav()" ><i class="fa fa-bars" aria-hidden="true"></i>  Menu </span></div>
+  </div>
+
+
+
+
+  </body>
+</html>
