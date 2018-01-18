@@ -12,27 +12,92 @@
     <body onload="openNav()"><div id="main">
         <div class="container">
                 <div class="row">
-                <div class="col-md-2 titre" id="gauche"></div>
-                <div class="col-md-6 titre" id="droite"><h1> Informations </h1></div>
+                <div class="col-md-3 titre" id="gauche"><div class="menu"><span onclick="openNav()" ><i class="fa fa-bars" aria-hidden="true"></i>  Menu </span></div></div>
+                <div class="col-md-5 titre" id="droite"><h1> Informations </h1></div>
                 <div class="col-md-4 titre"><img src="Logo_Centrale_Marseille.svg.png" width=90%></div>
                 </div>
+                <div id="mySidenav" class="sidenav">
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                  <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Accueil<br/><br/></a>
+                  <a href="infos.html"><i class="fa fa-info" aria-hidden="true"></i> Informations<br/><br/></a>
+                  <a href="offres.html"><i class="fa fa-briefcase" aria-hidden="true"></i> Offres de stages<br/><br/></a>
+                  <a href="debuter.html"> <i class="fa fa-handshake-o" aria-hidden="true"></i> Débuter son stage<br/><br/></a>
+                  <a href="evaluation.html"><i class="fa fa-check-square" aria-hidden="true"></i> Evaluation<br/><br/></a>
+                  <a href="FAQ.html"> <i class="fa fa-question" aria-hidden="true"></i> FAQ<br/><br/></a>
+                    <form class="example" action="action_page.php">
+                      <input type="text" placeholder="Que recherchez-vous ?" name="search">
+                      <button type="submit"><i class="fa fa-search"></i></button>
+                    </form>
+                  </div>
+
+                <p style="text-align: justify;"><br/><br/>Les périodes de stages sont des moments importants de votre formation d'ingénieurs. Ils sont au coeur des échanges entre l'école et le monde économique. Ils vous permettront de mettre en situation les acquis académiques et de découvrir les différentes missions qu'un ingénieur est amené à réaliser.</p>
+<p style="text-align: justify;">La règlementation nationale ainsi que les critères définis par la Commission des Titres de l'Ingénieur sont très stricts concernant les objectifs et le statut du stagiaire. Aussi vous devez impérativement lire et respecter les différentes informations et procédures que l'école a mis en place pour gérer votre stage.</p>
+<p style="text-align: center;"><span style="font-size:22px;"><strong><br/>Règles de base<br/><br/></strong></span></p>
+<ul>
+<li><span style="font-size:16px;">Pour être diplomé(e) vous devez cumuler <span style="color:#ff0000;">28 semaines de stage conventionnées et validées</span> pendant votre scolarité à Centrale Marseille, dont 14  semaines en entreprise.<br/><span style="font-size:16px;">​</span></span></li>
+<li><span style="font-size:16px;">Les durées minimales des différents stages sont imposées et ne peuvent pas se compenser entre elles :<br/></span><br />
+<table border="1" cellpadding="1" cellspacing="1" style="width:700px;">
+<tbody>
+<tr>
+<td>
+<p><strong>Stage </strong><strong>1A</strong></p>
+</td>
+<td>Découverte de l'entreprise</td>
+<td>4 semaines minimum (22 jours travaillés)</td>
+<td>
+<p>A partir du 02/07/2018</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Stage 2A</strong></p>
+</td>
+<td>Découverte du métier d'ingénieur</td>
+<td>8 semaines minimum (44 jours travaillés)</td>
+<td>A partir du 04/06/2018</td>
+</tr>
+<tr>
+<td>
+<p><strong>Stage 3A</strong></p>
+</td>
+<td>Travail de Fin d'Etude</td>
+<td>16 semaines minimum (88 jours travaillés)</td>
+<td>A partir du 02/04/2018</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<p> </p>
+<ul>
+<br/><li>Tout stage doit préalablement faire l'objet d'une <span style="color:#ff0000;">validation pédagogique </span>(<span style="font-size:18px;"><u><strong><a href="validation-pédagogique-et-convention">procédure ici</a></strong></u></span>). En particulier, l'école refusera toute demande : </li>
+</ul>
+<p style="text-align: center;">- Ne correspondant pas aux attentes pédagogiques du stage concerné<br />
+	    - Concernant des stages dans des pays ou des environnements à risques</p>
+<ul>
+<li>Un stage ne peut être conventionné que <span style="color:#ff0000;">s'il est obligatoire</span> pour l'obtention du diplôme</li><br/>
+<li>Un stage fait obligatoirement l’objet d’une convention <span style="color:#ff0000;">tripartite </span>(Entreprise / Labo – ECM – Eudiant).</li><br/>
+<li>Interdiction légale de faire un stage de <span style="color:#ff0000;">plus de 6 mois</span> dans le même organisme</li><br/>
+<li>Un stage conventionné par l'école fait obligatoirement l'objet d'une évaluation</li><br/>
+<li>Gratification de stage obligatoire si le stage est  d'une durée supérieure à 2 mois (44 jours travaillés)</li><br/>
+<li>Aucun stage ne peut débuter avant que la convention ne soit signée par toutes les parties</li><br/>
+<li>L’étudiant recherche lui-même son stage</li><br/>
+<li>A l'issue de votre stage l'organisme devra vous délivrer une attestaion de stage fait suivant le <a href="https://nuxeo.centrale-marseille.fr/nuxeo/nxdoc/default/161ebeb4-a9a4-45c8-8558-7127e385dc94/view_documents?tabIds=%3A">modèle officiel</a>.</li>
+</ul>
+<p> </p>
+<p style="text-align: center;"><span style="font-size:20px;"><strong><br/>Les interlocuteurs de votre stage<br/><br/></strong></span></p>
+<p style="text-align: justify;"><span style="font-size: 16px;">Pour toutes questions relatives à la <strong>gestion pédagogique des stages</strong>, vos interlocuteurs seront <em>Guillaume Chiavassa</em> -  Responsable des stages, ainsi que le bureau formations professionnalisantes (plot 2 bureau 121): <em>Maeva Gardavoir</em> et <em>Martine Justinien</em>. Les demandes devront être exclusivement adressées à l’adresse suivante: <a href="mailto:gestion-stage@centrale-marseille.fr">gestion-stage@centrale-marseille.fr</a></span></p>
+<p style="text-align: justify;"><span style="font-size:20px;"><span style="font-size:16px;">Pour toutes questions relatives à <strong>la recherche d’un stage ou au suivi de la convention</strong>, vos interlocuteurs au </span></span><span style="font-size: 16px;">Service Relations Entreprises et Valorisation de la Recherche</span><span style="font-size: 16px;">  seront:</span></p>
+<ul>
+<li><span style="font-size: 16px;">Pour les stages en entreprises : <em>Mouna Mechta</em> (Plot 4 bureau 120) <a href="mailto:mouna.mechta@centrale-marseille.fr">mouna.mechta@centrale-marseille.fr</a></span></li>
+<li><span style="font-size: 16px;">Pour les stages en laboratoires : </span><em style="font-size: 16px;">Sarah Mostefa</em><span style="font-size: 16px;"> (Plot 4 bureau 105) <a href="mailto:sarah.mostefa@centrale-marseille.fr">sarah.mostefa@centrale-marseille.fr</a></span></li>
+</ul>
+<p> </p>
+<p style="text-align: justify;"><span style="color:#ff0000;"><span style="font-size:16px;">Avant de contacter les interlocuteurs précédents, il est <u>indispensable</u> de consulter la liste de questions-réponses suivante, ainsi que celles plus spécifiques aux stages <span style="font-size:18px;"><u><strong><a href="#FAQ-stage1A"> 1A</a></strong></u></span>,  <u><strong><span style="font-size:18px;"><a href="#FAQ-stage2A">2A</a></span></strong></u>,  <span style="font-size:18px;"><u><strong><a href="#FAQ-stagecésure">Césures</a></strong></u></span>,  <span style="font-size:18px;"><u><strong><a href="#FAQ-stageTFE">TFE</a></strong></u></span>,  <span style="font-size:18px;"><u><strong><a href="#FAQ-stageDD">Double-Diplôme sortant</a></strong></u></span>.</span></span></p>
         </div>
 
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-      <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i><div class="menu-text"> Accueil</div></a>
-      <a href="infos.html"><i class="fa fa-info" aria-hidden="true"></i><div class="menu-text"> Informations</div></a>
-      <a href="offres.html"><i class="fa fa-briefcase" aria-hidden="true"></i><div class="menu-text"> Offres de stages</div></a>
-      <a href="debuter.html"> <i class="fa fa-handshake-o" aria-hidden="true"></i><div class="menu-text"> Débuter son stage</div></a>
-      <a href="evaluation.html"><i class="fa fa-check-square" aria-hidden="true"></i><div class="menu-text"> Evaluation</div></a>
-      <a href="FAQ.html"> <i class="fa fa-question" aria-hidden="true"></i><div class="menu-text"> FAQ</div></a>
-        <form class="example" action="action_page.php">
-          <input type="text" placeholder="Que recherchez-vous ?" name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
+
 
     </div>
-<div class="menu">
-    <span onclick="openNav()" ><i class="fa fa-bars" aria-hidden="true"></i>  Menu </span></div>
+
   </div></body>
